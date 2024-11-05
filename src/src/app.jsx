@@ -11,7 +11,11 @@ export function App() {
 	const [currentView, setCurrentView] = useState();
 
 	useEffect(() => {
-		handleHashChange();
+		if (window.location.hash.length === 0) {
+			window.location.hash = "#hjem-skjerm";
+		} else {
+			handleHashChange();
+		}
 
 		function handleHashChange() {
 			const newView = window.location.hash.substring(1);
