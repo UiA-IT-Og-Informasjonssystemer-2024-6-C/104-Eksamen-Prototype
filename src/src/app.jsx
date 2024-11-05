@@ -8,9 +8,11 @@ function ViewParent({ children }) {
 }
 
 export function App() {
-	const [currentView, setCurrentView] = useState("hjem-skjerm");
+	const [currentView, setCurrentView] = useState();
 
 	useEffect(() => {
+		handleHashChange();
+
 		function handleHashChange() {
 			const newView = window.location.hash.substring(1);
 			setCurrentView(newView);
@@ -22,6 +24,7 @@ export function App() {
 			window.removeEventListener("hashchange", handleHashChange);
 		};
 	}, []);
+
 	return (
 		<ViewParent>
 			<MobilePreview currentView={currentView} />

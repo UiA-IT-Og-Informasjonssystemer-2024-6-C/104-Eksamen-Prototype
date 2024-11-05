@@ -3,9 +3,6 @@ import Button from "../button";
 import NavigationBar from "../navigation-bar";
 
 function IngredientsList() {
-	// one ingredients is a card, which contains an image, a name, alergies, and a button to delete.
-	// image is just a placeholder for now
-
 	const ingredients = [
 		{
 			name: "Egg",
