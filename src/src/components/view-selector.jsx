@@ -6,9 +6,9 @@ export default function ViewSelector() {
 			<h2>Velg en visning</h2>
 
 			<ul>
-				{views.map((view) => (
-					<li key={view.anchor}>
-						<a href={`#${view.anchor}`}>{view.name}</a>
+				{Object.keys(views).map((view) => (
+					<li key={view}>
+						<a href={`#${view}`}>{views[view].name}</a>
 					</li>
 				))}
 			</ul>

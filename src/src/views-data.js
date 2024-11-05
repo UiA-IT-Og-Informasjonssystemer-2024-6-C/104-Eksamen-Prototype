@@ -1,34 +1,35 @@
-export const views = [
-	{
+import HomeScreen from "./components/previews/home-screen";
+import Login from "./components/previews/Login";
+import RecipeList from "./components/previews/recipe-list";
+import Settings from "./components/previews/Settings";
+import RecipeFilter from "./components/previews/recipe-filter";
+import RecipeDetails from "./components/previews/recipe-details";
+
+export const views = {
+	"hjem-skjerm": {
 		name: "Hjem Skjerm og Ingrediens Liste",
-		anchor: "hjem-skjerm",
-		component: () => <></>,
+		component: HomeScreen,
 	},
-	{
+	oppskriftsliste: {
 		name: "Oppskriftsliste",
-		anchor: "oppskriftsliste",
-		component: () => <></>,
+		component: RecipeList,
 	},
-	{
+	"oppskrifts-detaljer": {
 		name: "Oppskrifts Detaljer",
-		anchor: "oppskrifts-detaljer",
-		component: () => <></>,
+		component: RecipeDetails,
 	},
-	{
+	"logg-inn": {
 		name: "Logg Inn",
-		anchor: "logg-inn",
-		component: () => <></>,
+		component: Login,
 	},
-	{
+	innstillinger: {
 		name: "Innstillinger",
-		anchor: "innstillinger",
-		component: () => <></>,
+		component: Settings,
 	},
-	{
+	"oppskriftsliste-filtrering": {
 		name: "Oppskriftsliste Filtrering",
-		anchor: "oppskriftsliste-filtrering",
-		component: () => <></>,
+		component: RecipeFilter,
 	},
-];
+};
 
 export default views;
