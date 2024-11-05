@@ -46,6 +46,7 @@
 	height: 3rem;
 	font-size: small;
 	list-style-type: none;
+	padding: 0;
 }
 
 .app-bar li {
