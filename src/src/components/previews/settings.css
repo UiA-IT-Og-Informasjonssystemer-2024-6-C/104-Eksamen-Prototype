@@ -1,0 +1,65 @@
+.container {
+	width: 300px;
+	background-color: #ffffff;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	text-align: center;
+}
+
+.title {
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 20px;
+	color: #555;
+}
+
+.menu-item {
+	display: flex;
+	align-items: center;
+	background-color: #f9f0ff;
+	border: 1px solid #eee;
+	border-radius: 8px;
+	padding: 10px;
+	margin-bottom: 10px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.menu-item:hover {
+	background-color: #e6d9ff;
+}
+
+.menu-item img,
+.menu-item i {
+	width: 24px;
+	height: 24px;
+	margin-right: 15px;
+}
+
+.menu-item span {
+	font-size: 16px;
+	color: #555;
+}
+
+.icon-settings:before {
+	content: "⚙️";
+}
+.icon-globe:before {
+	content: "🌐";
+}
+.icon-bell:before {
+	content: "🔔";
+}
+.icon-favorites:before {
+	content: "📑";
+}
+.icon-user:before {
+	content: "👤";
+}
+.icon-lock:before {
+	content: "🔒";
+}
+.icon-logout:before {
+	content: "↩️";
+}
