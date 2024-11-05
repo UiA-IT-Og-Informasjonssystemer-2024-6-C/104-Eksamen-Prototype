@@ -23,7 +23,7 @@ function IngredientsList() {
 			{ingredients.map((ingredient) => (
 				<div key={ingredient.name} className="ingredient-card">
 					<img
-						src="https://via.placeholder.com/150"
+						src="https://dummyimage.com/100x100/"
 						alt="placeholder"
 					/>
 					<div>
