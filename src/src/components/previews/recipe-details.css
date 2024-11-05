@@ -1,0 +1,92 @@
+.recipe-container {
+	background-color: #fff;
+	width: 350px;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	text-align: center;
+}
+
+h1 {
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+.image-and-info {
+	position: relative;
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+.image-and-info img {
+	width: 100%;
+	border-radius: 10px;
+}
+
+.description {
+	margin-top: 10px;
+	font-size: 14px;
+	color: #666;
+}
+
+.details {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 10px;
+}
+
+.time-difficulty {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	font-size: 14px;
+	color: #333;
+}
+
+.time {
+	display: flex;
+	align-items: center;
+}
+
+.rating {
+	font-size: 14px;
+	color: #ffd700;
+}
+
+.difficulty {
+	padding: 5px 10px;
+	background-color: #f0ad4e;
+	color: white;
+	border-radius: 5px;
+}
+
+.favorite {
+	font-size: 18px;
+	color: #ff0000;
+	cursor: pointer;
+}
+
+.content {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+
+.ingredients,
+.instructions {
+	width: 48%;
+}
+
+.ingredients h2,
+.instructions h2 {
+	font-size: 16px;
+	color: #333;
+	margin-bottom: 10px;
+}
+
+.ingredients p,
+.instructions p {
+	font-size: 14px;
+	color: #666;
+}
