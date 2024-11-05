@@ -1,7 +1,5 @@
 import "./index.css";
 import { App } from "./app.jsx";
-import { hydrate } from "preact-iso";
+import { render } from "preact";
 
-if (typeof window !== "undefined") {
-	hydrate(<App />, document.getElementById("app"));
-}
+render(<App />, document.getElementById("app"));
