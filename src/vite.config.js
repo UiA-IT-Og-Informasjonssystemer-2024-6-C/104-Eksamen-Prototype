@@ -3,10 +3,6 @@ import preact from "@preact/preset-vite";
 
 // https://vite.dev/config/
 export default defineConfig({
-	plugins: [
-		preact({
-			prerender: { enabled: true },
-		}),
-	],
+	plugins: [preact()],
 	base: "104-Eksamen-Prototype",
 });
