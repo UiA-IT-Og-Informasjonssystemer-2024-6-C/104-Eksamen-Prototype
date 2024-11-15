@@ -1,14 +1,18 @@
-function AppBarItem({ label }) {
-	return <li>{label}</li>;
+function AppBarItem({ label, href }) {
+	return (
+		<li>
+			<a href={`#${href}`}>{label}</a>
+		</li>
+	);
 }
 
 export default function AppBar() {
 	return (
 		<div>
 			<ol className="app-bar">
-				<AppBarItem label="Innstillingar" />
-				<AppBarItem label="Mine Ingredienser" />
-				<AppBarItem label="Finn Oppskrifter" />
+				<AppBarItem label="Innstillingar" href={"innstillinger"} />
+				<AppBarItem label="Mine Ingredienser" href={"hjem-skjerm"} />
+				<AppBarItem label="Finn Oppskrifter" href={"oppskriftsliste"} />
 			</ol>
 		</div>
 	);
