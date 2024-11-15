@@ -3,6 +3,24 @@ import "./recipe-list.css";
 import AppBar from "../app-bar";
 import NavigationBar from "../navigation-bar";
 
+function RecipeCard(props) {
+	return (
+		<div
+			class="recipe-card"
+			onClick={() => (window.location.href = "#oppskrifts-detaljer")}
+		>
+			<div class="recipe-info">
+				<h3>{props.title}</h3>
+				<p>{props.description}</p>
+				<div class="time">
+					<span>⏱ X-X min</span>
+				</div>
+			</div>
+			<img src={props.image} alt={props.title} />
+		</div>
+	);
+}
+
 export default function RecipeList() {
 	return (
 		<div>
@@ -14,47 +32,21 @@ export default function RecipeList() {
 				</div>
 
 				<div class="recipe-list">
-					<div class="recipe-card">
-						<div class="recipe-info">
-							<h3>Pasta Bolognese</h3>
-							<p>Veldig godt, nam nam!</p>
-							<div class="time">
-								<span>⏱ X-X min</span>
-							</div>
-						</div>
-						<img
-							src="https://dummyimage.com/100x100/"
-							alt="Pasta Bolognese"
-						/>
-					</div>
-
-					<div class="recipe-card">
-						<div class="recipe-info">
-							<h3>Pizza</h3>
-							<p>Kjempegodt, nam nam!</p>
-							<div class="time">
-								<span>⏱ X-X min</span>
-							</div>
-						</div>
-						<img
-							src="https://dummyimage.com/100x100/"
-							alt="Pizza"
-						/>
-					</div>
-
-					<div class="recipe-card">
-						<div class="recipe-info">
-							<h3>Tomatsuppe</h3>
-							<p>Helt ok, nam!</p>
-							<div class="time">
-								<span>⏱ X-X min</span>
-							</div>
-						</div>
-						<img
-							src="https://dummyimage.com/100x100/"
-							alt="Tomatsuppe"
-						/>
-					</div>
+					<RecipeCard
+						title="Pasta Bolognese"
+						description="Veldig godt, nam nam!"
+						image="https://dummyimage.com/100x100/"
+					/>
+					<RecipeCard
+						title="Pizza"
+						description="Kjempegodt, nam nam!"
+						image="https://dummyimage.com/100x100/"
+					/>
+					<RecipeCard
+						title="Tomatsuppe"
+						description="Helt ok, nam!"
+						image="https://dummyimage.com/100x100/"
+					/>
 				</div>
 			</div>
 

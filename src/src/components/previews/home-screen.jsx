@@ -2,8 +2,37 @@ import AppBar from "../app-bar";
 import Button from "../button";
 import NavigationBar from "../navigation-bar";
 
-function IngredientsList() {
-	const ingredients = [
+import { useState } from "preact/hooks";
+
+function IngredientsList({ ingredients, setIngredients }) {
+	return (
+		<div style={{ minHeight: "450px" }}>
+			{ingredients.map((ingredient, idx) => (
+				<div key={idx} className="ingredient-card">
+					<img
+						src="https://dummyimage.com/100x100/"
+						alt="placeholder"
+					/>
+					<div>
+						<h4>{ingredient.name}</h4>
+						<p>Allergies: {ingredient.allergies.join(", ")}</p>
+					</div>
+					<Button
+						text="Slett"
+						onClick={() => {
+							setIngredients(
+								ingredients.filter((_, i) => i !== idx)
+							);
+						}}
+					/>
+				</div>
+			))}
+		</div>
+	);
+}
+
+export default function HomeScreen() {
+	const [ingredients, setIngredients] = useState([
 		{
 			name: "Egg",
 			allergies: ["egg"],
@@ -16,28 +45,18 @@ function IngredientsList() {
 			name: "Gluten",
 			allergies: ["gluten"],
 		},
-	];
+	]);
 
-	return (
-		<div>
-			{ingredients.map((ingredient) => (
-				<div key={ingredient.name} className="ingredient-card">
-					<img
-						src="https://dummyimage.com/100x100/"
-						alt="placeholder"
-					/>
-					<div>
-						<h4>{ingredient.name}</h4>
-						<p>Allergies: {ingredient.allergies.join(", ")}</p>
-					</div>
-					<Button text="Slett" />
-				</div>
-			))}
-		</div>
-	);
-}
+	function addIngredient() {
+		setIngredients([
+			...ingredients,
+			{
+				name: "Ny ingrediens",
+				allergies: [],
+			},
+		]);
+	}
 
-export default function HomeScreen() {
 	return (
 		<div>
 			<NavigationBar />
@@ -46,14 +65,17 @@ export default function HomeScreen() {
 					className="flex-row centered"
 					style={{ listStyleType: "none" }}
 				>
-					<Button text="Legg til" />
+					<Button text="Legg til" onClick={addIngredient} />
 					<h4>Ingredientsliste</h4>
-					<Button text="Kamera" />
+					<Button text="Kamera" onClick={addIngredient} />
 				</li>
 			</div>
 			<div>
 				<li style={{ listStyleType: "none" }}>
-					<IngredientsList />
+					<IngredientsList
+						ingredients={ingredients}
+						setIngredients={setIngredients}
+					/>
 				</li>
 			</div>
 			<AppBar />
