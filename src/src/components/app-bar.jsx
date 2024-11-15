@@ -1,7 +1,14 @@
+<<<<<<< Updated upstream
 function AppBarItem({ label, href }) {
 	return (
 		<li>
 			<a href={`#${href}`}>{label}</a>
+=======
+function AppBarItem({ label, text }) {
+	return (
+		<li>
+			<a href={`#${text}`}>{label}</a>
+>>>>>>> Stashed changes
 		</li>
 	);
 }
