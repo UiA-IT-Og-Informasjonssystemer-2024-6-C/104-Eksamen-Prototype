@@ -1,4 +1,5 @@
 import "./recipe-list.css";
+import searchSVG from "../../assets/search.svg";
 
 import AppBar from "../app-bar";
 import NavigationBar from "../navigation-bar";
@@ -28,6 +29,17 @@ export default function RecipeList() {
 
 			<div class="recipe-list-container">
 				<div class="search-bar">
+					<span>
+						<img
+							src={searchSVG}
+							style={{ cursor: "pointer", width: "20px" }}
+							alt="Søk"
+							onClick={() =>
+								(window.location.href =
+									"#oppskriftsliste-filtrering")
+							}
+						/>
+					</span>
 					<input type="text" placeholder="Søk etter oppskrifter" />
 				</div>
 
