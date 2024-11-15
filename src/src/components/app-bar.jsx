@@ -1,13 +1,19 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 function AppBarItem({ label, href }) {
 	return (
 		<li>
 			<a href={`#${href}`}>{label}</a>
 =======
+=======
+>>>>>>> Stashed changes
 function AppBarItem({ label, text }) {
 	return (
 		<li>
 			<a href={`#${text}`}>{label}</a>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 		</li>
 	);
