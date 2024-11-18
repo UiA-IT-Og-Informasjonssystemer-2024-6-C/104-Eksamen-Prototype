@@ -54,6 +54,10 @@
 	cursor: pointer;
 }
 
+.difficulty-level button.active {
+	background-color: #007bff;
+}
+
 .rating-scale {
 	display: flex;
 	justify-content: space-between;
@@ -77,7 +81,7 @@
 	cursor: pointer;
 }
 
-.category-buttons .active {
+.category-buttons button.active {
 	background-color: #007bff;
 	color: #fff;
 }
