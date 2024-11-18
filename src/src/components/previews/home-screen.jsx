@@ -1,6 +1,7 @@
 import AppBar from "../app-bar";
 import Button from "../button";
 import NavigationBar from "../navigation-bar";
+import TrashCan from "../../assets/trash-can.svg";
 
 import { useState } from "preact/hooks";
 
@@ -18,7 +19,7 @@ function IngredientsList({ ingredients, setIngredients }) {
 						<p>Allergies: {ingredient.allergies.join(", ")}</p>
 					</div>
 					<Button
-						text="Slett"
+						icon={TrashCan}
 						onClick={() => {
 							setIngredients(
 								ingredients.filter((_, i) => i !== idx)
