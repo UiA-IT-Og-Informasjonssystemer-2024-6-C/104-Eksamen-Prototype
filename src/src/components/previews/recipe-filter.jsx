@@ -3,6 +3,62 @@ import "./recipe-filter.css";
 import NavigationBar from "../navigation-bar";
 import AppBar from "../app-bar";
 
+import { useState } from "preact/hooks";
+
+function DifficultyButton({ level }) {
+	const [active, setActive] = useState(false);
+
+	return (
+		<button
+			className={active ? "active" : ""}
+			onClick={() => setActive(!active)}
+		>
+			{level}
+		</button>
+	);
+}
+
+function DifficultyList() {
+	return (
+		<div class="difficulty-level">
+			<DifficultyButton level="★☆☆" />
+			<DifficultyButton level="★★☆" />
+			<DifficultyButton level="★★★" />
+		</div>
+	);
+}
+
+function CategoryButton({ category, defaultOn }) {
+	const [active, setActive] = useState(defaultOn ?? false);
+
+	return (
+		<button
+			className={active ? "active" : ""}
+			onClick={() => setActive(!active)}
+		>
+			{category}
+		</button>
+	);
+}
+
+function CategoryList() {
+	return (
+		<div class="category-buttons">
+			<CategoryButton category="Suppe" />
+			<CategoryButton category="Salat" />
+			<CategoryButton category="Frokost" defaultOn={true} />
+			<CategoryButton category="Lunsj" />
+			<CategoryButton category="Middag" />
+			<CategoryButton category="Kveldsmat" />
+			<CategoryButton category="Vegetarisk" />
+			<CategoryButton category="Sjømat" />
+			<CategoryButton category="Biff" />
+			<CategoryButton category="Fisk" />
+			<CategoryButton category="Pasta" />
+		</div>
+	);
+}
+
 export default function RecipeFilter() {
 	return (
 		<div>
@@ -10,11 +66,7 @@ export default function RecipeFilter() {
 			<div class="filter-container">
 				<div class="filter-section">
 					<h3>Vanskelighetsgrad</h3>
-					<div class="difficulty-level">
-						<button>★☆☆</button>
-						<button>★★☆</button>
-						<button>★★★</button>
-					</div>
+					<DifficultyList />
 				</div>
 
 				<div class="filter-section">
@@ -31,19 +83,7 @@ export default function RecipeFilter() {
 
 				<div class="filter-section">
 					<h3>Kategori</h3>
-					<div class="category-buttons">
-						<button>Suppe</button>
-						<button>Salat</button>
-						<button class="active">Frokost</button>
-						<button>Lunsj</button>
-						<button>Middag</button>
-						<button>Kveldsmat</button>
-						<button>Vegetarisk</button>
-						<button>Sjømat</button>
-						<button>Biff</button>
-						<button>Fisk</button>
-						<button>Pasta</button>
-					</div>
+					<CategoryList />
 				</div>
 
 				<div class="filter-section">
