@@ -26,7 +26,7 @@ export default function RecipeDetails() {
 						<div class="rating">
 							<span>★★★★★</span>
 						</div>
-						<div class="difficulty">Medium Difficulty</div>
+						<div class="difficulty">Middels vanskelig</div>
 						<div class="favorite">❤️</div>
 					</div>
 				</div>
