@@ -10,7 +10,7 @@ export default function AppBar() {
 	return (
 		<div>
 			<ol className="app-bar">
-				<AppBarItem label="Innstillingar" href={"innstillinger"} />
+				<AppBarItem label="Innstillinger" href={"innstillinger"} />
 				<AppBarItem label="Mine Ingredienser" href={"hjem-skjerm"} />
 				<AppBarItem label="Finn Oppskrifter" href={"oppskriftsliste"} />
 			</ol>
