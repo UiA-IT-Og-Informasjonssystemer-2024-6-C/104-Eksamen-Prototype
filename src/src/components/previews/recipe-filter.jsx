@@ -60,6 +60,16 @@ function CategoryList() {
 }
 
 export default function RecipeFilter() {
+	const onReset = () => {
+		document
+			.querySelectorAll("button.active")
+			.forEach((button) => button.classList.remove("active"));
+	};
+
+	const onConfirm = () => {
+		window.history.back();
+	};
+
 	return (
 		<div>
 			<NavigationBar />
@@ -93,6 +103,11 @@ export default function RecipeFilter() {
 						<span>0</span>
 						<span>100</span>
 					</div>
+				</div>
+
+				<div>
+					<button onClick={onReset}>Nullstill</button>
+					<button onClick={onConfirm}>Bekreft</button>
 				</div>
 			</div>
 			<AppBar />
