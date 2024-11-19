@@ -50,7 +50,7 @@ function CategoryList() {
 			<CategoryButton category="Lunsj" />
 			<CategoryButton category="Middag" />
 			<CategoryButton category="Kveldsmat" />
-			<CategoryButton category="Vegetarisk" />
+			<CategoryButton category="Vegetar" />
 			<CategoryButton category="Sjømat" />
 			<CategoryButton category="Biff" />
 			<CategoryButton category="Fisk" />

@@ -16,7 +16,7 @@ function IngredientsList({ ingredients, setIngredients }) {
 					/>
 					<div>
 						<h4>{ingredient.name}</h4>
-						<p>Allergies: {ingredient.allergies.join(", ")}</p>
+						<p>Allergener: {ingredient.allergies.join(", ")}</p>
 					</div>
 					<Button
 						icon={TrashCan}

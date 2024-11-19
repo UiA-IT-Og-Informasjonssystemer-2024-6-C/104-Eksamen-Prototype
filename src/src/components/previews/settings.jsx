@@ -12,7 +12,7 @@ export default function Settings() {
 
 				<div class="menu-item">
 					<i class="icon-settings"></i>
-					<span>Allergen</span>
+					<span>Allergener</span>
 				</div>
 
 				<div class="menu-item">
@@ -42,7 +42,7 @@ export default function Settings() {
 
 				<div class="menu-item">
 					<i class="icon-logout"></i>
-					<span>Bytt konto/Log av</span>
+					<span>Bytt konto/Logg ut</span>
 				</div>
 			</div>
 
